@@ -1,0 +1,82 @@
+/******************** Loading *************************/
+.loading__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
+  opacity: 1;
+  z-index: 999999999;
+}
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.loading__body p {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 70px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  position: relative;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+/******************** Filters Content *************************/
+.filter-content {
+  min-width: 200px;
+  background: rgb(255, 255, 255);
+  padding: 10px 0 10px 10px;
+  position: absolute;
+  top: 10%;
+  z-index: 999;
+}
+.filter__option {
+  margin: 5px 0;
+}
+.filter__name {
+  display: block;
+  font-weight: bold;
+}
+.filter__date {
+  width: 100px;
+}
+/* Filter Button */
+.filter-btn {
+  position: absolute;
+  bottom: 10%;
+  margin-left: 2%;
+  z-index: 999;
+}
+
+/* Date Picker */
+.react-datepicker-wrapper {
+  width: 100% !important;
+}
+
+.info__detail {
+  width: 200px !important;
+  text-align: justify;
+}
+.info__detail span {
+  font-size: 20px;
+  color: rgb(38, 132, 163);
+  cursor: pointer;
+  z-index: 99999 !important;
+}
